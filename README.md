@@ -2,7 +2,7 @@
 A free video cutter application based on FFMPEG for Windows.
 
 <p align="center"> 
-  <img src="https://dl.dropboxusercontent.com/s/ncgy958xmlylyk7/dvc_ss4.png">
+  <img src="https://dl.dropboxusercontent.com/s/ei8hi7oh5vaqj9j/dvc_ss4_2.png">
 </p>
 
 # How to Use The Application?
