@@ -9,7 +9,7 @@ A free video cutter application based on FFMPEG for Windows.
 ## 1. Downloading
 Download the ZIP file under the folder named "Dark-Video-Cutter-v1.0-for-Windows-x86" from the upper side of this document. Extract the ZIP file and then run "DarkVideoCutter.exe".
 
-> Your browser or antivirus may show a security warning, just ignore it (or you can always compile the application by yourself).
+> Your browser or antivirus software may show a security warning, just ignore it (or you can downlaod the source code and compile the application by yourself).
 
 ## 2. Configuring
 Dark Video Cutter uses FFMPEG to cut the videos. You need to download it before using the application. It's very simple to download, just go to https://ffmpeg.zeranoe.com/builds/ and then download the lastest version of FFMPEG. After the download, extract the ZIP file and select the "ffpmpeg.exe" from the "bin" folder as shown below.
