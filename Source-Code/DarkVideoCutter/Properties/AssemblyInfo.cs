@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Bahaddin Veyseloglu")]
 [assembly: AssemblyProduct("Dark Video Cutter")]
-[assembly: AssemblyCopyright("Copyright (c) 2019 Bahaddin Veyseloğlu")]
+[assembly: AssemblyCopyright("Copyright (c) 2019 Bahaddin Veyseloglu")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

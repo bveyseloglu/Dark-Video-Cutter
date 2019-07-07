@@ -51,7 +51,7 @@
             // 
             // buttonOK
             // 
-            this.buttonOK.Location = new System.Drawing.Point(360, 436);
+            this.buttonOK.Location = new System.Drawing.Point(364, 440);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Padding = new System.Windows.Forms.Padding(5);
             this.buttonOK.Size = new System.Drawing.Size(77, 23);
@@ -66,7 +66,7 @@
             this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(173)))), ((int)(((byte)(255)))));
-            this.linkLabel1.Location = new System.Drawing.Point(25, 218);
+            this.linkLabel1.Location = new System.Drawing.Point(25, 221);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(169, 13);
             this.linkLabel1.TabIndex = 84;
@@ -83,7 +83,7 @@
             this.labelDesc.Name = "labelDesc";
             this.labelDesc.Size = new System.Drawing.Size(412, 22);
             this.labelDesc.TabIndex = 83;
-            this.labelDesc.Text = "Written by Bahaddin Veyseloğlu.";
+            this.labelDesc.Text = "Copyright (c) 2019 Bahaddin Veyseloğlu";
             // 
             // labelTitle
             // 
@@ -100,7 +100,7 @@
             // 
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(25, 258);
+            this.label1.Location = new System.Drawing.Point(25, 261);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(412, 32);
             this.label1.TabIndex = 92;
@@ -121,7 +121,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(45, 111);
+            this.label2.Location = new System.Drawing.Point(45, 114);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 15);
             this.label2.TabIndex = 93;
@@ -144,9 +144,9 @@
             // 
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(25, 231);
+            this.label3.Location = new System.Drawing.Point(25, 234);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(412, 17);
+            this.label3.Size = new System.Drawing.Size(416, 17);
             this.label3.TabIndex = 95;
             this.label3.Text = "_________________________________________________________________________________" +
     "____________________________________________________";
@@ -169,7 +169,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Location = new System.Drawing.Point(45, 289);
+            this.label4.Location = new System.Drawing.Point(45, 292);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 15);
             this.label4.TabIndex = 96;
@@ -182,7 +182,7 @@
             this.linkLabel2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel2.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(173)))), ((int)(((byte)(255)))));
-            this.linkLabel2.Location = new System.Drawing.Point(25, 400);
+            this.linkLabel2.Location = new System.Drawing.Point(25, 403);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(131, 13);
             this.linkLabel2.TabIndex = 98;
@@ -207,7 +207,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(73)))), ((int)(((byte)(74)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.richTextBox1);
-            this.panel1.Location = new System.Drawing.Point(100, 111);
+            this.panel1.Location = new System.Drawing.Point(100, 114);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(315, 96);
             this.panel1.TabIndex = 100;
@@ -217,7 +217,7 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(73)))), ((int)(((byte)(74)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.richTextBox2);
-            this.panel2.Location = new System.Drawing.Point(100, 289);
+            this.panel2.Location = new System.Drawing.Point(100, 292);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(315, 96);
             this.panel2.TabIndex = 101;
@@ -244,7 +244,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(480, 523);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(480, 523);
             this.Name = "About";

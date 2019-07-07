@@ -372,7 +372,7 @@ namespace DarkVideoCutter
                 FileInfo fi = new FileInfo(outputFile);
                 if (previousFileLenght == fi.Length)
                 {
-                    SetStatus("Video cutted successfully.",WorkingStatus.Success);
+                    SetStatus("Video cutted successfully. Check the video folder.",WorkingStatus.Success);
                     timerCheckCutCompleted.Stop();
                     ControlsEnable(true);
                 }

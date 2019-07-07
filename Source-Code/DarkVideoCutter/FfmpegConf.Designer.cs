@@ -134,7 +134,7 @@
             // buttonOK
             // 
             this.buttonOK.Enabled = false;
-            this.buttonOK.Location = new System.Drawing.Point(361, 288);
+            this.buttonOK.Location = new System.Drawing.Point(365, 292);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Padding = new System.Windows.Forms.Padding(5);
             this.buttonOK.Size = new System.Drawing.Size(77, 23);
@@ -165,7 +165,7 @@
             this.MinimumSize = new System.Drawing.Size(480, 375);
             this.Name = "FfmpegConf";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Dark Video Player Configuration";
+            this.Text = "Dark Video Cutter Configuration";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FfmpegConf_FormClosing);
             this.Load += new System.EventHandler(this.FfmpegConf_Load);
             this.ResumeLayout(false);
