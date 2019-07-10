@@ -26,7 +26,7 @@ You are ready to go!
 * Minor UI improvements.
 
 ### v1.0
-Initial release.
+* Initial release.
 
 ## License
 Licensed under GPL-3.0.
