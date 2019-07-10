@@ -25,6 +25,9 @@ namespace DarkVideoCutter
         public Form1()
         {
             InitializeComponent();
+            this.AllowDrop = true;
+            this.DragEnter += new DragEventHandler(Form1_DragEnter);
+            this.DragDrop += new DragEventHandler(Form1_DragDrop);
         }
 
         public void ControlsEnable(bool status)
@@ -46,7 +49,7 @@ namespace DarkVideoCutter
                     Application.Exit();
             }
 
-            SetStatus("Open a video file from menu.", WorkingStatus.Idle);
+            SetStatus("Open a video file from menu or drag on drop to the window.", WorkingStatus.Idle);
         }
 
         public enum WorkingStatus
@@ -78,52 +81,55 @@ namespace DarkVideoCutter
             darkContextMenu1.Show(this, pnt);            
         }
 
+        private void OpenVideo(string videoPath)
+        {
+            fileOpened = videoPath;
+            fileName = Path.GetFileName(videoPath);
+
+            // set status
+            SetStatus(Path.GetFileName(videoPath), WorkingStatus.Idle);
+
+            // preview video
+            axWindowsMediaPlayer1.URL = videoPath;
+            axWindowsMediaPlayer1.settings.volume = 0;
+
+            // enable controls
+            trackBar1.Enabled = true;
+            trackBar2.Enabled = true;
+            textBox1.Enabled = true;
+            textBox2.Enabled = true;
+            labelVideoPosition.Visible = true;
+
+            // get video duration then configure bars and textboxes
+            var player = new WindowsMediaPlayer();
+            var clip = player.newMedia(videoPath);
+            textBox1.Text = labelVideoPosition.Text = "00:00:00.0";
+
+            string vidLenght = TimeSpan.FromSeconds(clip.duration).ToString();
+
+            if (vidLenght.Contains(".") == false) vidLenght += ".0";
+
+            textBox2.Text = vidLenght.Substring(0, 10);
+            trackBar1.Maximum = Convert.ToInt32(textBox2.Text.Substring(0, 2)) * 3600 + Convert.ToInt32(textBox2.Text.Substring(3, 2)) * 60 + Convert.ToInt32(textBox2.Text.Substring(6, 2));
+            trackBar2.Maximum = trackBar1.Maximum;
+            trackBar1.Value = 0;
+            trackBar2.Value = trackBar2.Maximum;
+
+            // reset media player
+            axWindowsMediaPlayer1.Ctlcontrols.currentPosition = 0;
+            axWindowsMediaPlayer1.Ctlcontrols.play();
+
+            // start timer to update video position label
+            timerCheckVideoEnd.Start();
+        }
+
         private void OpenVideoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog o = new OpenFileDialog();
             o.Filter = "Video Files(*.mp4;*.mov;*.avi;*.wmv;*.mkv)|*.mp4;*.mov;*.avi;*.wmv;*.mkv|All files (*.*)|*.*";
 
             if (o.ShowDialog() == DialogResult.OK)
-            {
-                fileOpened = o.FileName;
-                fileName = Path.GetFileName(o.FileName);
-
-                // set status
-                SetStatus(Path.GetFileName(o.FileName), WorkingStatus.Idle);
-
-                // preview video
-                axWindowsMediaPlayer1.URL = o.FileName;
-                axWindowsMediaPlayer1.settings.volume = 0;
-
-                // enable controls
-                trackBar1.Enabled = true;
-                trackBar2.Enabled = true;
-                textBox1.Enabled = true;
-                textBox2.Enabled = true;
-                labelVideoPosition.Visible = true;
-
-                // get video duration then configure bars and textboxes
-                var player = new WindowsMediaPlayer();
-                var clip = player.newMedia(o.FileName);
-                textBox1.Text = labelVideoPosition.Text= "00:00:00.0";
-
-                string vidLenght = TimeSpan.FromSeconds(clip.duration).ToString();
-
-                if (vidLenght.Contains(".") == false) vidLenght += ".0";
-
-                textBox2.Text = vidLenght.Substring(0,10);
-                trackBar1.Maximum = Convert.ToInt32(textBox2.Text.Substring(0,2))*3600 + Convert.ToInt32(textBox2.Text.Substring(3, 2)) * 60 + Convert.ToInt32(textBox2.Text.Substring(6, 2));
-                trackBar2.Maximum = trackBar1.Maximum;
-                trackBar1.Value = 0;
-                trackBar2.Value = trackBar2.Maximum;
-
-                // reset media player
-                axWindowsMediaPlayer1.Ctlcontrols.currentPosition = 0;
-                axWindowsMediaPlayer1.Ctlcontrols.play();
-
-                // start timer to update video position label
-                timerCheckVideoEnd.Start();
-            }
+                OpenVideo(o.FileName);
 
         }
 
@@ -336,6 +342,19 @@ namespace DarkVideoCutter
         private void CheckForUpdatesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/bveyseloglu/Dark-Video-Cutter");
+        }
+
+        private void Form1_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop)) e.Effect = DragDropEffects.Link;
+        }
+
+        private void Form1_DragDrop(object sender, DragEventArgs e)
+        {
+            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+
+            if (Path.GetExtension(files[0]) == ".mp4" || Path.GetExtension(files[0]) == ".mov" || Path.GetExtension(files[0]) == ".avi" || Path.GetExtension(files[0]) == ".wmv" || Path.GetExtension(files[0]) == ".mkv")
+                OpenVideo(files[0]);
         }
 
         private void ConfigureFFMPEGLocationToolStripMenuItem_Click(object sender, EventArgs e)

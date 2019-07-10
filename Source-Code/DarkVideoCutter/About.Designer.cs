@@ -51,7 +51,7 @@
             // 
             // buttonOK
             // 
-            this.buttonOK.Location = new System.Drawing.Point(364, 440);
+            this.buttonOK.Location = new System.Drawing.Point(368, 442);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Padding = new System.Windows.Forms.Padding(5);
             this.buttonOK.Size = new System.Drawing.Size(77, 23);
@@ -92,9 +92,9 @@
             this.labelTitle.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelTitle.Location = new System.Drawing.Point(74, 25);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(291, 40);
+            this.labelTitle.Size = new System.Drawing.Size(307, 40);
             this.labelTitle.TabIndex = 82;
-            this.labelTitle.Text = "Dark Video Cutter 1.0";
+            this.labelTitle.Text = "Dark Video Cutter 1.01";
             // 
             // label1
             // 
@@ -196,7 +196,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(25, 440);
+            this.label5.Location = new System.Drawing.Point(25, 447);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(115, 15);
             this.label5.TabIndex = 99;

@@ -134,7 +134,7 @@
             // buttonOK
             // 
             this.buttonOK.Enabled = false;
-            this.buttonOK.Location = new System.Drawing.Point(365, 292);
+            this.buttonOK.Location = new System.Drawing.Point(368, 295);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Padding = new System.Windows.Forms.Padding(5);
             this.buttonOK.Size = new System.Drawing.Size(77, 23);
